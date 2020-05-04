@@ -1,0 +1,284 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* --- */
+
+html {
+  font-size: 16px;
+  font-size: 2vh;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+/* --- */
+
+#container {
+  height: 100vh;
+  width: 100vw;
+
+  background-color: cornsilk;
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.8)
+  );
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+/* --- */
+
+h1 {
+  margin-bottom: 1rem;
+
+  color: goldenrod;
+  font-size: 3rem;
+  font-variant: small-caps;
+  font-weight: lighter;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0.15rem rgba(0, 0, 0, 0.5);
+}
+
+/* --- */
+
+form {
+  margin: 0 1rem 1rem 1rem;
+  padding: 1rem;
+
+  background-color: antiquewhite;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.4)
+  );
+  border-radius: 0.2rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- */
+
+input[type="text"] {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+
+  border: solid 0.05rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+::placeholder {
+  font-size: 0.9rem;
+  font-family: sans-serif;
+  color: tomato;
+}
+
+/* --- */
+
+textarea {
+  min-height: 4rem;
+
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+
+  font-family: sans-serif;
+
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+  resize: vertical;
+}
+
+/* --- */
+
+input[type="submit"] {
+  padding: 0.5rem;
+
+  color: white;
+  font-size: 1rem;
+  font-weight: bolder;
+  text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.5);
+
+  background-color: orange;
+  border-style: none;
+  border-radius: 0.1rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+/* --- */
+
+table {
+  margin: 0rem 1rem;
+  /* padding: 1rem; */
+
+  background-color: antiquewhite;
+  background-image: radial-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+  background-image: radial-gradient(
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0.4)
+  );
+  border-collapse: separate;
+  border-radius: 0.2rem;
+  border-spacing: 0.5rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+th {
+  height: 2rem;
+}
+
+td {
+  height: 3rem;
+}
+
+th,
+td {
+  padding: 0.5rem;
+
+  font-size: 0.9rem;
+
+  background-color: white;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+}
+
+td > p {
+  height: 2rem;
+
+  overflow: hidden;
+  scroll-behavior: smooth;
+
+  display: flex;
+  align-items: center;
+}
+
+/* --- */
+
+/* Columna # */
+th:first-child,
+td:first-child {
+  width: 5vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Columna Título */
+th:nth-child(2),
+td:nth-child(2) {
+  min-width: 20vw;
+
+  text-align: left;
+}
+
+/* Columna Descripción */
+th:nth-child(3),
+td:nth-child(3) {
+  width: 100%;
+
+  text-align: left;
+}
+
+/* Columna Operaciones */
+th:last-child,
+td:last-child {
+  min-width: 20vw;
+  max-width: 30vw;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* --- */
+
+.cambiar {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.5);
+
+  /* background-color: limegreen; */
+  border: solid 0.05rem white;
+  border-radius: 0.2rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cambiar:active {
+  box-shadow: 0.05rem 0.05rem 0 rgba(0, 0, 0, 0.5);
+}
+
+/* --- */
+
+.modificar {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.5);
+
+  background-color: deepskyblue;
+  border: solid 0.05rem white;
+  border-radius: 0.2rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modificar:active {
+  box-shadow: 0.05rem 0.05rem 0 rgba(0, 0, 0, 0.5);
+}
+/* --- */
+
+.borrar {
+  height: 1.5rem;
+  width: 1.5rem;
+
+  color: white;
+  font-weight: bolder;
+  text-decoration: none;
+  text-shadow: 0.05rem 0.05rem 0.15rem rgba(0, 0, 0, 0.5);
+
+  background-color: tomato;
+  border: solid 0.05rem white;
+  border-radius: 0.2rem;
+  box-shadow: 0.15rem 0.15rem 0.25rem rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.borrar:active {
+  box-shadow: 0.05rem 0.05rem 0 rgba(0, 0, 0, 0.5);
+}
+
+/* --- */
+
+.negro {
+  background-color: black;
+}
+
+.verde {
+  background-color: limegreen;
+}

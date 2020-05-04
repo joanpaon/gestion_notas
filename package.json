@@ -1,0 +1,19 @@
+{
+  "name": "gestion_notas",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "author": "José A. Pacheco Ondoño",
+  "license": "ISC"
+}

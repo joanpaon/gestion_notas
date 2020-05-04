@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración -->
+  <meta charset="UTF-8" />
+  <title>CRUD NodeJS+MongoDB</title>
+
+  <!-- Referencias -->
+  <meta name="author" content="José A. Pacheco Ondoño" />
+  <meta name="description" content="CRUD NodeJS+MongoDB" />
+  <meta name="keywords" content="node mongo express" />
+
+  <!-- Dispositivos Móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Enlaces -->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- Título -->
+    <h1>Edición de Notas</h1>
+
+    <!-- Formulario - Interacción -->
+    <form action="/update/<%= tarea._id %> " method="POST">
+      <!-- Titulo -->
+      <input type="text" name="titulo" placeholder="Título" value="<%= tarea.titulo %>" />
+
+      <!-- Descripción -->
+      <textarea name="descripcion" placeholder="Descripción"><%= tarea.descripcion %></textarea>
+
+      <!-- Actualizar Nota Actual -->
+      <input type="submit" value="Actualizar" />
+    </form>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <!-- Configuración -->
+  <meta charset="UTF-8" />
+  <title>CRUD NodeJS+MongoDB</title>
+
+  <!-- Referencias -->
+  <meta name="author" content="José A. Pacheco Ondoño" />
+  <meta name="description" content="CRUD NodeJS+MongoDB" />
+  <meta name="keywords" content="node mongo express" />
+
+  <!-- Dispositivos Móviles -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Enlaces -->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="/css/app.css" />
+</head>
+
+<body>
+  <div id="container">
+    <!-- Título -->
+    <h1>Gestión de Notas</h1>
+
+    <!-- Formulario - Interacción-->
+    <form action="/add" method="POST">
+      <input type="text" name="titulo" placeholder="Título" />
+
+      <textarea name="descripcion" placeholder="Descripción"></textarea>
+
+      <input type="submit" value="Añadir" />
+    </form>
+
+    <!-- Tabla - Resultados -->
+    <table>
+      <thead>
+        <th>#</th>
+        <th>Título</th>
+        <th>Descripción</th>
+        <th>Operaciones</th>
+      </thead>
+      <tbody>
+        <% for (let i = 0; i < tareas.length; i++) { %>
+        <tr>
+          <td><%= i + 1 %></td>
+          <td>
+            <p><%= tareas[i].titulo %></p>
+          </td>
+          <td>
+            <p><%= tareas[i].descripcion %></p>
+          </td>
+          <td>
+            <a href="/turn/<%= tareas[i]._id %>" class="cambiar <%= tareas[i].estado ? 'verde' : 'negro'%>">C</a>
+            <a href="/update/<%= tareas[i]._id %>" class="modificar">M</a>
+            <a href="/delete/<%= tareas[i]._id %>" class="borrar">B</a>
+          </td>
+        </tr>
+        <% } %>
+      </tbody>
+    </table>
+  </div>
+</body>
+
+</html>
